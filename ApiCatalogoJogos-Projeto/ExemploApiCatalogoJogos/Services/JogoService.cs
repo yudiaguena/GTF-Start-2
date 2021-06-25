@@ -28,6 +28,7 @@ namespace ExemploApiCatalogoJogos.Services
                                     Id = jogo.Id,
                                     Nome = jogo.Nome,
                                     Produtora = jogo.Produtora,
+                                    Ano = jogo.Ano,
                                     Preco = jogo.Preco
                                 })
                                .ToList();
@@ -45,6 +46,7 @@ namespace ExemploApiCatalogoJogos.Services
                 Id = jogo.Id,
                 Nome = jogo.Nome,
                 Produtora = jogo.Produtora,
+                Ano = jogo.Ano,
                 Preco = jogo.Preco
             };
         }
@@ -61,6 +63,7 @@ namespace ExemploApiCatalogoJogos.Services
                 Id = Guid.NewGuid(),
                 Nome = jogo.Nome,
                 Produtora = jogo.Produtora,
+                Ano = jogo.Ano,
                 Preco = jogo.Preco
             };
 
@@ -71,6 +74,7 @@ namespace ExemploApiCatalogoJogos.Services
                 Id = jogoInsert.Id,
                 Nome = jogo.Nome,
                 Produtora = jogo.Produtora,
+                Ano = jogo.Ano,
                 Preco = jogo.Preco
             };
         }
@@ -84,6 +88,7 @@ namespace ExemploApiCatalogoJogos.Services
 
             entidadeJogo.Nome = jogo.Nome;
             entidadeJogo.Produtora = jogo.Produtora;
+            entidadeJogo.Ano = jogo.Ano;
             entidadeJogo.Preco = jogo.Preco;
 
             await _jogoRepository.Atualizar(entidadeJogo);
